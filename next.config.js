@@ -3,8 +3,8 @@ module.exports = () => {
                    const rewrites = () => {
                      return [
                        {
-                         source: "/api",
-                         destination: "https://tin-dev-back.herokuapp.com/api/users",
+                         source: "https://tin-dev-front.herokuapp.com/api",
+                         destination: "http://tin-dev-back.herokuapp.com/api/users",
                        },
 
                      ];
