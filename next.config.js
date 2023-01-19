@@ -12,4 +12,16 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = () => {
+                   const rewrites = () => {
+                     return [
+                       {
+                         source: "/api",
+                         destination: "https://tin-dev-back.herokuapp.com/api/users",
+                       },
+                     ];
+                   };
+                   return {
+                     rewrites,
+                   };
+                 };
