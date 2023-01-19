@@ -1,4 +1,19 @@
-/** @type {import('next').NextConfig} */
+///** @type {import('next').NextConfig} */
+module.exports = () => {
+                   const rewrites = () => {
+                     return [
+                       {
+                         source: "/api",
+                         destination: "https://tin-dev-back.herokuapp.com/api/users",
+                       },
+
+                     ];
+                   };
+                   return {
+                     rewrites
+                   };
+                 };
+
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -12,18 +27,4 @@ const nextConfig = {
   },
 };
 
-module.exports = () => {
-                   const rewrites = () => {
-                     return [
-                       {
-                         source: "/api",
-                         destination: "https://tin-dev-back.herokuapp.com/api/users"
-                       },
-
-                      { eslint: ignoreDuringBuilds: true }
-                     ];
-                   };
-                   return {
-                     rewrites
-                   };
-                 };
+module.exports = nextConfig;
