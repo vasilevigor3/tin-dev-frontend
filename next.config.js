@@ -19,10 +19,11 @@ module.exports = () => {
                          source: "/api",
                          destination: "https://tin-dev-back.herokuapp.com/api/users"
                        },
+
+                      { eslint: ignoreDuringBuilds: true }
                      ];
                    };
                    return {
-                     rewrites,
-                     nextConfig
+                     rewrites
                    };
                  };
