@@ -17,8 +17,7 @@ module.exports = () => {
                      return [
                        {
                          source: "/api",
-                         destination: "https://tin-dev-back.herokuapp.com/api/users",
-                         nextConfig
+                         destination: "https://tin-dev-back.herokuapp.com/api/users"
                        },
                      ];
                    };
