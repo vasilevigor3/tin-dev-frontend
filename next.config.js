@@ -1,19 +1,12 @@
 ///** @type {import('next').NextConfig} */
-module.exports = () => {
-                   const rewrites = () => {
-                     return [
-                       {
-                         source: "https://tin-dev-front.herokuapp.com/api",
-                         destination: "http://tin-dev-back.herokuapp.com/api/users",
-                       },
 
-                     ];
-                   };
-                   return {
-                     rewrites
-                   };
-                 };
+//const nextConfig = {
 
+//};
+//
+//module.exports = nextConfig;
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -24,6 +17,16 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
+  },
+
+  reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: "/api",
+        destination: "/vacancies/pending",
+      },
+    ];
   },
 };
 
