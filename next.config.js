@@ -24,7 +24,7 @@ const nextConfig = {
     return [
       {
         source: "/api",
-        destination: "/vacancies/pending",
+        destination: "https://tin-dev-back.herokuapp.com/api/users",
       },
     ];
   },
